@@ -7,7 +7,7 @@ module.exports = (req, res, next) => {
             token = authHeader?.split(' ')[1],
             authUser = jwt.verify(token, process.env.JWT_SECRET)
         req.authUser = authUser
-        console.log(`Authorized ${authUser.email}`)
+        //console.log(`Authorized ${authUser.email}`)
         next()
 
     } catch (error) {
