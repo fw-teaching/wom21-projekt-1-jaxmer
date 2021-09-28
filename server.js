@@ -11,11 +11,12 @@ mongoose.connect(process.env.DB_URL)
 db.on('error', (error) => console.log(error))
 db.once('open', () => console.log('Connected to DB'))
 
-// Testa att detta funkar, ersätt sedan med egen kod
-//app.get('/', (req, res) => res.json("This is a test!"));
-
-//Routers
+// Routers
 const usersRouter = require('./routes/users')
 app.use('/users', usersRouter)
 
+const cabinsRouter = require('./routes/cabins')
+app.use('/cabins', cabinsRouter)
+
+// Listener
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));

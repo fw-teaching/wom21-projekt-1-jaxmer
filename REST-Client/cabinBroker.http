@@ -1,0 +1,78 @@
+@baseUrl = http://localhost:3030
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MTUyZTBhMmUxYmIxMzRmYWQ3NTg3OWUiLCJlbWFpbCI6InNlYkBkb2UuY29tIiwiaWF0IjoxNjMyODIxNDIzLCJleHAiOjE2MzM0MjYyMjN9.h_McEWkEXM5jU8ide9bOI2-rFjaASzxQhsP1Pc22nLw
+
+
+###             ###
+### CREATE USER ###
+###             ###
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+    "email": "seb@doe.com",
+    "firstName": "Seb",
+    "lastName": "Doe",
+    "password": "password123"
+}
+
+### LOGIN WITH USER
+POST {{baseUrl}}/users/login
+Content-Type: application/json
+
+{
+    "email": "seb@doe.com",
+    "password": "password123"
+}
+
+
+###                     ###
+### CREATE A CABIN POST ###
+###                     ###
+POST {{baseUrl}}/cabins
+Content-Type: application/json
+Authorization: Barer {{token}}
+
+{
+    "address": "Kyläsaarenkuja 7",
+    "size": 24,
+    "sauna": true,
+    "beach": true,
+    "rent": 507
+}
+
+### SEE ALL CABIN POSTS
+GET {{baseUrl}}/cabins
+Authorization: Barer {{token}}
+
+### SEE A SPECIFIC CABIN POST
+GET {{baseUrl}}/cabins/6152e0cae1bb134fad7587a1
+Authorization: Barer {{token}}
+
+### EDIT INFO OF A CABIN POST
+PUT {{baseUrl}}/cabins/6152e0cae1bb134fad7587a1
+Content-Type: application/json
+Authorization: Barer {{token}}
+
+{
+    "address": "Kalliokuja",
+    "size": 24,
+    "sauna": true,
+    "beach": false,
+    "rent": 499
+}
+
+### DELETE A SPECIFIC CABIN POST
+DELETE {{baseUrl}}/cabins/6152e0cae1bb134fad7587a1
+Authorization: Barer {{token}}
+
+
+###                    ###
+### SEE & DELETE USERS ###
+###                    ###
+
+### SEE ALL USERS
+GET {{baseUrl}}/users
+Content-Type: application/json
+
+### DELETE A SPECIFIC USER
+DELETE {{baseUrl}}/users/6152e0a2e1bb134fad75879e

@@ -4,7 +4,7 @@ const express = require('express'),
     bcrypt = require('bcrypt'),
     jwt = require('jsonwebtoken')
 
-// GET USERS (DELETE LATER)
+// GET all USERS
 router.get('/', async (req, res) => {
     try {
         const users = await User.find()
@@ -28,9 +28,9 @@ router.post('/login', async (req, res) => {
                 accessToken = await jwt.sign(
                     jwtBody,
                     process.env.JWT_SECRET,
-                    { expiresIn: '1d' })
-            return res.status(201).send(`Login SUCCESSFUL`)
-            //return res.status(201).send(`Login SUCCESSFUL, access token: ${accessToken}`)
+                    { expiresIn: '7d' })
+            //return res.status(201).send(`Login SUCCESSFUL`)
+            return res.status(201).send(`Login SUCCESSFUL, access token: ${accessToken}`)
         } else res.status(201).send('Login FAILED')
 
     } catch (error) {
