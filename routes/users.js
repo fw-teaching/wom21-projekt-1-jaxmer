@@ -28,7 +28,7 @@ router.post('/login', async (req, res) => {
                 accessToken = await jwt.sign(
                     jwtBody,
                     process.env.JWT_SECRET,
-                    { expiresIn: '7d' })
+                    { expiresIn: '1d' })
             //return res.status(201).send(`Login SUCCESSFUL`)
             return res.status(201).send(`Login SUCCESSFUL, access token: ${accessToken}`)
         } else res.status(201).send('Login FAILED')

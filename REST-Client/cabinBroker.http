@@ -1,5 +1,6 @@
-@baseUrl = http://localhost:3030
-@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MTUyZTBhMmUxYmIxMzRmYWQ3NTg3OWUiLCJlbWFpbCI6InNlYkBkb2UuY29tIiwiaWF0IjoxNjMyODIxNDIzLCJleHAiOjE2MzM0MjYyMjN9.h_McEWkEXM5jU8ide9bOI2-rFjaASzxQhsP1Pc22nLw
+### @baseUrl = http://localhost:3030
+@baseUrl = https://frozen-headland-66513.herokuapp.com
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MTU2YzA4YjAwZmRjNWQ3NGZiMGNkMmQiLCJlbWFpbCI6ImJhZEBkb2UuY29tIiwiaWF0IjoxNjMzMDc1MzQzLCJleHAiOjE2MzM2ODAxNDN9.ChAXldZ7AlMHtkbK6bl3GqjQDsjzTV1v6Vz3U6nrKMA
 
 
 ###             ###
@@ -9,8 +10,8 @@ POST {{baseUrl}}/users
 Content-Type: application/json
 
 {
-    "email": "seb@doe.com",
-    "firstName": "Seb",
+    "email": "bad@doe.com",
+    "firstName": "Bad",
     "lastName": "Doe",
     "password": "password123"
 }
@@ -20,7 +21,7 @@ POST {{baseUrl}}/users/login
 Content-Type: application/json
 
 {
-    "email": "seb@doe.com",
+    "email": "bad@doe.com",
     "password": "password123"
 }
 
@@ -33,7 +34,7 @@ Content-Type: application/json
 Authorization: Barer {{token}}
 
 {
-    "address": "Kyläsaarenkuja 7",
+    "address": "Testikuja 47",
     "size": 24,
     "sauna": true,
     "beach": true,
@@ -75,4 +76,4 @@ GET {{baseUrl}}/users
 Content-Type: application/json
 
 ### DELETE A SPECIFIC USER
-DELETE {{baseUrl}}/users/6152e0a2e1bb134fad75879e
+DELETE {{baseUrl}}/users/61519d9cdd5d6e645477d282
