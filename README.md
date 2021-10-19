@@ -2,7 +2,7 @@
 ### Webbtjänster och molnteknologi 21
 
 Gruppen börja projektet med att dela på uppgifterna. Sebastian fick Del 1 /users samt Del 2 och 3. Jacob skulle börja arbeta på resten av Del 1 och sedan hjälpa till Sebastian med Del 3 när han var klar.
-På grund av att Jakob hade väldigt brottom och han inte arbeta på uppgiften tog Sebastian åt sig /cabins att värkstella men lämnade något smått till Jakob att göra.
+På grund av att Jakob hade väldigt brottom och han inte arbeta på uppgiften tog Sebastian åt sig /cabins att värkstella men lämnade /bookings till Jakob att göra.
 
 Slutligen blev nu de nu som de blev. Gruppen fick inte allting gjort men Sebastian är nöjd med vad han fick gjort. Han klara av de här uppgifterna egentligen med av att följa med på lektion recordings och och ändra lite på varibel namn här och där. Det känns för honom att han arbeta inte så hårt på grund av detta men värde sig endå bra från denna del av kursen.
 
